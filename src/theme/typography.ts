@@ -9,22 +9,14 @@
  *  ==> The type of 'greeting' is 'hello' (not string) and the type of 'numbers' is [1, 2, 3] (not number[])
  *  We narrow down the type of the variable to its literal value.
  */
-import { Lexend } from "next/font/google";
 import { pxToRem } from "../utils/pxToRem";
 import { responsiveFontSizes } from "../utils/responsiveFontSizes";
 import { TypographyOptions } from "@mui/material/styles/createTypography";
 
-// Auto-optimized font by Next.js
-// https://nextjs.org/docs/basic-features/font-optimization
-export const primaryFont = Lexend({
-  weight: ["300", "400", "500"],
-  subsets: ["latin"],
-  display: "swap",
-  fallback: ["Helvetica", "sans-serif"],
-});
+const primaryFont = "Lexend, sans-serif";
 
 const typography: TypographyOptions = {
-  fontFamily: primaryFont.style.fontFamily,
+  fontFamily: primaryFont,
   h1: {
     fontWeight: 500,
     lineHeight: 1.05,

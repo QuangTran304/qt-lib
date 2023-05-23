@@ -1,21 +1,15 @@
-"use client";
-
 import { CssBaseline } from "@mui/material";
 import {
   ThemeProvider as MuiThemeProvider,
   ThemeOptions,
   createTheme,
-} from "@mui/material/styles";
-import { CacheProvider } from "@emotion/react";
+} from "@mui/material";
 
 import GlobalStyles from "./globalStyles";
-import createEmotionCache from "../utils/createEmotionCache";
 import componentOverrides from "./componentOverrides";
 import palette from "./palette";
 import typography from "./typography";
 import spacing from "./spacing";
-
-const clientSizeEmotionCache = createEmotionCache();
 
 interface ThemeProviderProps {
   children: React.ReactNode;
@@ -48,12 +42,10 @@ export default function ThemeProvider({ children }: ThemeProviderProps) {
   theme.components = componentOverrides(theme);
 
   return (
-    <CacheProvider value={clientSizeEmotionCache}>
-      <MuiThemeProvider theme={theme}>
-        <CssBaseline />
-        <GlobalStyles />
-        {children}
-      </MuiThemeProvider>
-    </CacheProvider>
+    <MuiThemeProvider theme={theme}>
+      <CssBaseline />
+      <GlobalStyles />
+      {children}
+    </MuiThemeProvider>
   );
 }

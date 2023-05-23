@@ -1,5 +1,4 @@
-import { Button } from "@mui/material";
-import { TeamMember } from "./components";
+import { Button, TeamMember } from "./components";
 
 function App() {
   return (
@@ -8,11 +7,11 @@ function App() {
 
       <Button variant="contained">My button</Button>
 
-      {/* <TeamMember
+      <TeamMember
         name="John Doe"
         title="Manager"
         photo="https://picsum.photos/200"
-      /> */}
+      />
     </>
   );
 }

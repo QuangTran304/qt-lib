@@ -10,6 +10,6 @@ import Link from "./Link";
 export default function componentOverrides(theme: Theme) {
   return {
     ...Button(theme),
-    ...Link(theme),
+    ...Link(),
   };
 }
