@@ -22,14 +22,14 @@ export default defineConfig({
     rollupOptions: {
       // external: ["react", "react-dom", "styled-components"],
       external: [...Object.keys(packageJson.peerDependencies)],
-      output: {
-        // exports: "named",
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-          "@mui/material": "MUI",
-        },
-      },
+      // output: {
+      //   // exports: "named",
+      //   globals: {
+      //     react: "React",
+      //     "react-dom": "ReactDOM",
+      //     "@mui/material": "MUI",
+      //   },
+      // },
     },
   },
 });

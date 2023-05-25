@@ -1,5 +1,5 @@
-import { CssBaseline } from "@mui/material";
 import {
+  CssBaseline,
   ThemeProvider as MuiThemeProvider,
   ThemeOptions,
   createTheme,
@@ -36,10 +36,12 @@ export default function ThemeProvider({ children }: ThemeProviderProps) {
   };
 
   const theme = createTheme(themeOptions);
+  // let theme: Theme = createTheme(themeOptions);
 
   // Need to override components AFTER creating the theme, then re-assign it back to theme
   // so that we can access the theme properties INSIDE each of these customized components.
   theme.components = componentOverrides(theme);
+  // theme = createTheme({ ...theme, components: componentOverrides(theme) });
 
   return (
     <MuiThemeProvider theme={theme}>

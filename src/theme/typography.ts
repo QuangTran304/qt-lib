@@ -13,6 +13,47 @@ import { pxToRem } from "../utils/pxToRem";
 import { responsiveFontSizes } from "../utils/responsiveFontSizes";
 import { TypographyOptions } from "@mui/material/styles/createTypography";
 
+declare module "@mui/material/styles" {
+  interface TypographyVariants {
+    body3: React.CSSProperties;
+    assistiveText: React.CSSProperties;
+    labelLarge: React.CSSProperties;
+    labelMedium: React.CSSProperties;
+    labelSmall: React.CSSProperties;
+    labelTiny: React.CSSProperties;
+    labelTinyHeavy: React.CSSProperties;
+    buttonLarge: React.CSSProperties;
+    buttonSmall: React.CSSProperties;
+  }
+  // allow configuration using `createTheme`
+  interface TypographyVariantsOptions {
+    body3?: React.CSSProperties;
+    assistiveText?: React.CSSProperties;
+    labelLarge?: React.CSSProperties;
+    labelMedium?: React.CSSProperties;
+    labelSmall?: React.CSSProperties;
+    labelTiny?: React.CSSProperties;
+    labelTinyHeavy?: React.CSSProperties;
+    buttonLarge?: React.CSSProperties;
+    buttonSmall?: React.CSSProperties;
+  }
+}
+
+// Declare additional options for Typography's VARIANT prop
+declare module "@mui/material/Typography" {
+  interface TypographyPropsVariantOverrides {
+    body3: true;
+    assistiveText: true;
+    labelLarge: true;
+    labelMedium: true;
+    labelSmall: true;
+    labelTiny: true;
+    labelTinyHeavy: true;
+    buttonLarge: true;
+    buttonSmall: true;
+  }
+}
+
 const primaryFont = "Lexend, sans-serif";
 
 const typography: TypographyOptions = {

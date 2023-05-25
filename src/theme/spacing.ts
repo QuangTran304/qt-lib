@@ -10,6 +10,47 @@
  *  We narrow down the type of the variable to its literal value.
  */
 
+export interface SpacingOptions {
+  /** Value: 2px */
+  xxs: string;
+  /** Value: 4px */
+  xs: string;
+  /** Value: 8px */
+  s: string;
+  /** Value: 16px */
+  m: string;
+  /** Value: 24px */
+  l: string;
+  /** Value: 32px */
+  xl: string;
+  /** Value: 40px */
+  xxl: string;
+  /** Value: 48px */
+  xxl2: string;
+  /** Value: 56px */
+  xxl3: string;
+  /** Value: 64px */
+  xxl4: string;
+  /** Value: 72px */
+  xxl5: string;
+  /** Value: 80px */
+  xxl6: string;
+  /** Value: 88px */
+  xxl7: string;
+  /** Value: 96px */
+  xxl8: string;
+}
+
+declare module "@mui/material/styles" {
+  interface Theme {
+    customSpacing: SpacingOptions;
+  }
+  // allow configuration using `createTheme`
+  interface ThemeOptions {
+    customSpacing?: SpacingOptions;
+  }
+}
+
 const spacing = {
   xxs: "2px",
   xs: "4px",
@@ -28,3 +69,4 @@ const spacing = {
 } as const;
 
 export default spacing;
+
