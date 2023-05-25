@@ -4,11 +4,12 @@ interface TeamMemberProps extends BoxProps {
   name: string;
   title: string;
   photo: string;
+  hasTitle?: boolean;
 }
 
 const TeamMember = (props: TeamMemberProps) => {
   const theme = useTheme();
-  const { name, title, photo, sx } = props;
+  const { name, title, photo, hasTitle = true, sx } = props;
 
   return (
     <Box sx={{ textAlign: "center", ...sx }}>
@@ -26,9 +27,11 @@ const TeamMember = (props: TeamMemberProps) => {
       >
         {name}
       </Typography>
-      <Typography variant="body1" color="secondary.main">
-        {title}
-      </Typography>
+      {hasTitle && (
+        <Typography variant="body1" color="secondary.main">
+          {title}
+        </Typography>
+      )}
     </Box>
   );
 };

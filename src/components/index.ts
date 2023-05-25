@@ -1,2 +1,2 @@
 export { default as TeamMember } from "./TeamMember";
-export { Button } from "./Button";
+export { default as Button } from "./Button";

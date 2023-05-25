@@ -5,7 +5,9 @@ function App() {
     <>
       <h1>Hello React Lib</h1>
 
-      <Button variant="contained">My button</Button>
+      <Button variant="contained" label="btn">
+        My button
+      </Button>
 
       <TeamMember
         name="John Doe"
