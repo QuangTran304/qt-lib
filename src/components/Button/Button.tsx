@@ -4,6 +4,7 @@ import {
 } from "@mui/material";
 
 export interface ButtonProps extends MuiButtonProps {
+  /** The display label of the button */
   label: string;
 }
 
