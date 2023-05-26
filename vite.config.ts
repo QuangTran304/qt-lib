@@ -9,12 +9,12 @@ export default defineConfig({
   plugins: [
     react(),
     dts({
-      // insertTypesEntry: true,
+      insertTypesEntry: true,
     }),
   ],
   build: {
     lib: {
-      entry: resolve(__dirname, "src/components/index.ts"),
+      entry: resolve(__dirname, "src"),
       formats: ["es"],
       fileName: (format) => `index.${format}.js`,
     },

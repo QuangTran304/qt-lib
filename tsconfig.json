@@ -8,6 +8,9 @@
     "allowJs": true,
     "module": "esnext",
     "jsx": "react-jsx",
+    // "declaration": true,
+    // "emitDeclarationOnly": true,
+    // "outDir": "dist",
     "skipLibCheck": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
@@ -23,6 +26,6 @@
     "allowImportingTsExtensions": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "src/stories/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
